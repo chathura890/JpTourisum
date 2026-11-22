@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "home": "Home",
+    "safari": "Safari",
+    "vehicles": "Vehicles",
+    "drivers": "Drivers",
+    "packages": "Packages",
+    "about": "About",
+    "feedback": "Feedback",
+    "contact": "Contact",
+    "login": "Login",
+    "signup": "Sign Up",
+    "bookNow": "Book Now"
+  },
+  "hero": {
+    "heading": "Your Journey to Yala Starts Here",
+    "subtitle": "Book your transport, safari jeep and return journey — all in one place.",
+    "primaryBtn": "BOOK YOUR JOURNEY",
+    "secondaryBtn": "EXPLORE SAFARI",
+    "from": "From",
+    "to": "To",
+    "date": "Travel Date",
+    "passengers": "Passengers",
+    "vehicle": "Vehicle Type",
+    "search": "SEARCH VEHICLES"
+  },
+  "whatsapp": "Chat with us on WhatsApp"
+}

@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #1a3622;
+  --color-jungle: #2d5a27;
+  --color-safari-gold: #c89b3c;
+  --color-amber-warm: #d97706;
+  --color-off-white: #fdfbf7;
+  --color-charcoal: #2b2b2b;
+}
+
+@layer base {
+  body {
+    @apply bg-off-white text-charcoal font-sans antialiased;
+  }
+}
+
+.glass {
+  @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-lg;
+}
+
+.glass-dark {
+  @apply bg-charcoal/80 backdrop-blur-md border border-white/10 shadow-xl;
+}
+
