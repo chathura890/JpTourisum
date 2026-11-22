@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import Hero from '../../components/public/Hero';
 import JourneyTimeline from '../../components/public/JourneyTimeline';
 import VehicleCard from '../../components/common/VehicleCard';
+import { ExperiencePillars } from '../../components/public/ExperiencePillars';
+import { TravelSeasonsGuide } from '../../components/public/TravelSeasonsGuide';
 import { useNavigate } from 'react-router-dom';
 
 const MOCK_VEHICLES = [
@@ -120,6 +122,9 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* The 6 Experience Pillars Section (Inspired by Sri Lanka Tourism) */}
+      <ExperiencePillars />
 
       {/* Complete Journey Section */}
       <section className="py-24 bg-off-white relative overflow-hidden">
@@ -283,6 +288,10 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Travel Seasons & Climate Guide */}
+      <TravelSeasonsGuide />
+
       {/* Blog Section */}
       <section className="py-24 bg-off-white relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">

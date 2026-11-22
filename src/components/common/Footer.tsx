@@ -129,8 +129,17 @@ const Footer = () => {
                 <i className="fab fa-cc-paypal text-blue-900 text-xl"></i>
               </div>
             </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-xl p-2.5 mb-3 text-[11px] text-gray-300">
+              <div className="flex items-center gap-1.5 text-safari-gold font-bold mb-0.5">
+                <i className="fas fa-shield-halved"></i>
+                <span>Tourist Police & Hotline: 1912</span>
+              </div>
+              <p className="text-[10px] text-gray-400">24/7 National Tourist Assistance</p>
+            </div>
+
             <p className="text-[11px] text-gray-400 leading-tight">
-              Approved by Sri Lanka Tourism<br/>Development Authority
+              Approved by Sri Lanka Tourism<br/>Development Authority (SLTDA)
             </p>
           </div>
         </div>
