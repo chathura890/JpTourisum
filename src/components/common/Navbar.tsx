@@ -37,7 +37,6 @@ const Navbar = () => {
   ];
 
   const currentLang = i18n.language || 'en';
-  const langLabels: Record<string, string> = { en: 'EN', si: 'සිං', ta: 'தமிழ்' };
 
   return (
     <header

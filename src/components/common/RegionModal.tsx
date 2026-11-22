@@ -131,17 +131,13 @@ const SearchableDropdown = ({
 
 const RegionModal: React.FC<RegionModalProps> = ({ isOpen, onClose }) => {
   const { i18n } = useTranslation();
-  const { currency, setCurrency } = useSettings();
+  const { setCurrency } = useSettings();
   
   const [selectedCountry, setSelectedCountry] = useState('US');
   const [selectedLang, setSelectedLang] = useState(i18n.language || 'en');
 
   const handleCountryChange = (countryCode: string) => {
     setSelectedCountry(countryCode);
-    const country = COUNTRIES.find(c => c.code === countryCode);
-    // If the country has a specific default language we support, we can switch it.
-    // For now, let's just keep English default and let them change if they want, 
-    // or switch if it's LK -> si. But the user asked to leave English by default.
   };
 
   const handleSave = () => {

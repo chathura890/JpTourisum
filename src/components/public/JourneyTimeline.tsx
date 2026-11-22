@@ -5,14 +5,14 @@ const JourneyTimeline = () => {
   const steps = [
     { icon: <i className="fas fa-home" style={{fontSize: '28px'}}></i>, title: "Your Location", desc: "Pickup from anywhere in Sri Lanka" },
     { icon: <i className="fas fa-car" style={{fontSize: '28px'}}></i>, title: "Transport", desc: "Comfortable ride to your destination" },
-    { icon: <i className="fas fa-map" size={28} ></i>, title: "Arrival", desc: "Reach the location safely" },
+    { icon: <i className="fas fa-map" style={{fontSize: '28px'}}></i>, title: "Arrival", desc: "Reach the location safely" },
     { icon: <i className="fas fa-crosshairs" style={{fontSize: '28px'}}></i>, title: "Tour Experience", desc: "Engage in your chosen activity" },
     { icon: <i className="fas fa-camera" style={{fontSize: '28px'}}></i>, title: "Memories", desc: "Experience the thrilling sights" },
     { icon: <i className="fas fa-arrows-rotate" style={{fontSize: '28px'}}></i>, title: "Return", desc: "Comfortable journey back" },
     { icon: <i className="fas fa-location-dot" style={{fontSize: '28px'}}></i>, title: "Destination", desc: "Safe drop-off at your next stop" }
   ];
 
-  const containerVariants = {
+  const containerVariants: any = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -22,7 +22,7 @@ const JourneyTimeline = () => {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: any = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
   };

@@ -43,7 +43,7 @@ const Register = () => {
             <p className="text-gray-300 text-sm">Create your account and explore the beauty of Sri Lanka.</p>
           </div>
 
-          <form onSubmit={() => {}} className="space-y-4">
+          <form onSubmit={handleLogin} className="space-y-4">
             
             {/* Full Name */}
             <div className="relative">

@@ -70,12 +70,12 @@ const FEATURES = [
   }
 ];
 
-const fadeInUp = {
+const fadeInUp: any = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
 };
 
-const staggerContainer = {
+const staggerContainer: any = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -276,7 +276,7 @@ const Home = () => {
               <motion.div key={vehicle.id} variants={fadeInUp} className="h-full">
                 <VehicleCard 
                   vehicle={vehicle} 
-                  onBook={(id) => navigate('/book')} 
+                  onBook={() => navigate('/book')} 
                 />
               </motion.div>
             ))}
