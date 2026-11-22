@@ -22,7 +22,7 @@ const Login = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/40 z-10"></div>
         <img 
-          src="/login-bg.jpg" 
+          src={`${import.meta.env.BASE_URL}login-bg.jpg`} 
           alt="Sri Lanka Background" 
           className="w-full h-full object-cover"
         />

@@ -14,9 +14,10 @@ const Hero = () => {
           loop
           muted
           playsInline
+          poster={`${import.meta.env.BASE_URL}login-bg.jpg`}
           className="w-full h-full object-cover"
         >
-          <source src="/12.mp4" type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}12.mp4`} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
