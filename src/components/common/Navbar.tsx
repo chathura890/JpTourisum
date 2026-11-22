@@ -120,13 +120,28 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className={`lg:hidden ${isScrolled || !isHome ? 'text-forest' : 'text-white drop-shadow-md'}`}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <i className="fas fa-times text-[28px]"></i> : <i className="fas fa-bars text-[28px]"></i>}
-        </button>
+        {/* Mobile Right Actions & Menu Button */}
+        <div className="flex lg:hidden items-center gap-3">
+          <Link
+            to="/login"
+            className={`flex items-center justify-center w-8 h-8 rounded-full border transition-colors ${
+              isScrolled || !isHome 
+                ? 'border-gray-200 text-charcoal hover:border-forest bg-gray-50/50 hover:bg-forest hover:text-white' 
+                : 'border-white/30 text-white hover:bg-white/10 backdrop-blur-sm'
+            }`}
+            aria-label="Profile / Login"
+          >
+            <i className="fas fa-user text-[15px]"></i>
+          </Link>
+
+          <button
+            className={`${isScrolled || !isHome ? 'text-forest' : 'text-white drop-shadow-md'}`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Menu"
+          >
+            {isMobileMenuOpen ? <i className="fas fa-times text-[28px]"></i> : <i className="fas fa-bars text-[28px]"></i>}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -139,6 +154,17 @@ const Navbar = () => {
             className="lg:hidden bg-white border-t border-gray-100 overflow-hidden shadow-2xl"
           >
             <div className="flex flex-col px-6 py-4 gap-4">
+              <Link
+                to="/login"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 py-2 text-charcoal text-base font-semibold border-b border-gray-100"
+              >
+                <div className="w-8 h-8 rounded-full bg-forest/10 flex items-center justify-center text-forest">
+                  <i className="fas fa-user text-sm"></i>
+                </div>
+                <span>Sign In / Profile</span>
+              </Link>
+
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
