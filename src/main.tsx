@@ -4,11 +4,14 @@ import App from './App.tsx';
 import './index.css';
 import './lib/i18n';
 import { SettingsProvider } from './context/SettingsContext';
+import { AuthProvider } from './context/AuthContext';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <SettingsProvider>
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </SettingsProvider>
   </StrictMode>
 );

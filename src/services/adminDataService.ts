@@ -443,14 +443,14 @@ class AdminDataService {
     try {
       const data = localStorage.getItem(key);
       if (data) return JSON.parse(data);
-    } catch {}
+    } catch { }
     return fallback;
   }
 
   private setStorage<T>(key: string, value: T): void {
     try {
       localStorage.setItem(key, JSON.stringify(value));
-    } catch {}
+    } catch { }
   }
 
   // BOOKINGS
@@ -475,7 +475,7 @@ class AdminDataService {
 
   // Driver Trip Lifecycle Update (Requirement #7)
   updateDriverTripProgress(
-    bookingId: string, 
+    bookingId: string,
     progressStep: BookingRecord['tripProgress'],
     note?: string
   ): BookingRecord {
@@ -486,7 +486,7 @@ class AdminDataService {
     const booking = list[index];
     const timeline = booking.tripProgressTimeline || [];
     const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ', ' + new Date().toLocaleDateString();
-    
+
     timeline.push({ step: progressStep, timestamp, note });
 
     // Map progress step to overall booking status
@@ -713,3 +713,4 @@ class AdminDataService {
 }
 
 export const adminDataService = new AdminDataService();
+
